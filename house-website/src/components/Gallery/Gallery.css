@@ -1,0 +1,42 @@
+/* Gallery Component Styles */
+.gallery {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    border-radius: 5px;
+  }
+  
+  .gallery h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px; /* Space between items */
+  }
+  
+  .gallery-item {
+    overflow: hidden; /* Prevents overflow from the image */
+    border-radius: 5px;
+    transition: transform 0.3s;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+  }
+  
+  .gallery-description {
+    padding: 10px; /* Space around description */
+    font-size: 0.9em; /* Slightly smaller font size */
+    color: #555; /* Dark gray color for better readability */
+    text-align: center; /* Center align the text */
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+  }
+  

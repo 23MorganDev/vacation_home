@@ -1,0 +1,62 @@
+/* CalendarAvailability Component Styles */
+.calendar-availability {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin: 20px 0;
+  }
+  
+  .calendar-availability h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .month-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+    gap: 10px; /* Space between days */
+  }
+  
+  .calendar-header {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .calendar-day {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .calendar-day.empty {
+    background-color: transparent; /* No background for empty slots */
+  }
+  
+  .calendar-day:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .available {
+    background-color: #a8e6cf; /* Light green for available */
+  }
+  
+  .unavailable {
+    background-color: #ff8b94; /* Light red for unavailable */
+  }
+  
+  .status {
+    display: block;
+    font-size: 0.8em;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  

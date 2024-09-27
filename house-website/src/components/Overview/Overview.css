@@ -1,0 +1,70 @@
+/* Overview Component */
+.overview {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header */
+  .overview-header {
+    position: relative;
+  }
+  
+  .header-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Home Header */
+  .home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+  }
+  
+  /* Sections */
+  section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  /* Picture Catalogue */
+  .pictures {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .pictures img {
+    max-width: 300px; 
+    margin: 10px;
+  }
+  
+  /* Footer */
+  .home-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+  }
+  
+  .social-links {
+    margin-top: 10px;
+  }
+  
+  .social-links a {
+    color: white;
+    margin: 0 15px;
+    font-size: 24px; 
+    text-decoration: none;
+  }
+  
