@@ -9,9 +9,7 @@ body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   background-color: #E1F5FE;
-  /* Light Sky Blue - subtle beach backdrop */
   color: #003B73;
-  /* Deep Ocean Blue for default text */
 }
 
 .overview {
@@ -25,7 +23,6 @@ body {
 section {
   padding: 20px;
   background-color: #FFF;
-  /* White for a clean section look */
   margin: 10px 0;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -35,21 +32,18 @@ section {
 h2 {
   font-size: 1.8rem;
   color: #026873;
-  /* Seaweed Green - refreshing and tropical */
   margin-bottom: 10px;
 }
 
 h3 {
   font-size: 1.5rem;
   color: #026873;
-  /* Same green for subheadings */
   margin-bottom: 10px;
 }
 
 p,
 ul {
   color: #004D61;
-  /* Muted Ocean Teal - easy readability */
   margin-bottom: 10px;
 }
 
@@ -58,10 +52,8 @@ ul {
   list-style-type: disc;
 }
 
-/* Description Section */
 .description {
   color: #004D61;
-  /* Muted Ocean Teal */
 }
 
 /* Picture Catalogue */
@@ -102,20 +94,16 @@ ul {
 .house-rules ul,
 .house-policy ul {
   color: #026873;
-  /* Seaweed Green for bullet items */
 }
 
-/* Highlight Links and Buttons */
 a {
   color: #FF7043;
-  /* Sunset Orange for links */
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
 a:hover {
   color: #FF8A80;
-  /* Coral Pink hover effect */
 }
 
 /* Footer */
@@ -123,12 +111,9 @@ a:hover {
   text-align: center;
   padding: 20px;
   background-color: #003B73;
-  /* Deep Ocean Blue */
   color: #FFF;
-  /* White for contrast */
   margin-top: 20px;
   border-top: 5px solid #FF7043;
-  /* Sunset Orange divider */
 }
 
 .social-links {
@@ -137,7 +122,6 @@ a:hover {
 
 .social-links a {
   color: #FF7043;
-  /* Sunset Orange */
   margin: 0 15px;
   font-size: 24px;
   text-decoration: none;
@@ -146,7 +130,6 @@ a:hover {
 
 .social-links a:hover {
   color: #FF8A80;
-  /* Coral Pink hover effect */
 }
 
 /* Responsive Design */

@@ -2,28 +2,23 @@ import React from 'react';
 import Homeheader from "../Homeheader/Homeheader";
 import Footer from "../Footer/Footer";
 import './HomePage.css';
-import ImageOne from "../../assets/images/BD image2.jpg"
-
 
 const HomePage = () => {
   return (
     <div className="homepage">
-      {/* Home div with NavLinks and Logo */}
-      <div>
-        <Homeheader />
-      </div>
+      {/* Navigation bar */}
+      <Homeheader />
 
-      {/* Center div with two sections */}
+      {/* Main content */}
       <main className="home-main">
-        <section className='bgImage'>
-          <img src={ImageOne} alt='background' />
-        </section>
+        <div className="content">
+          <h1>Welcome to Lamu House</h1>
+          <p>Your journey of tranquility and serene living starts here.</p>
+        </div>
       </main>
 
-      {/* Footer with social media and email links */}
-      <div>
-        <Footer />
-      </div>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

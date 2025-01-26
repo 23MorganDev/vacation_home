@@ -28,7 +28,6 @@
   list-style-type: disc;
   margin-left: 20px;
   padding-left: 0;
-  /* Remove default padding for better alignment */
 }
 
 .policy-section ul li {
@@ -60,21 +59,18 @@ strong {
   .rates-section {
     padding: 15px;
     max-width: 90%;
-    /* Reduce the max-width for tablets */
   }
 
   .rates-section h2,
   .rates-section h3,
   .rates-section h4 {
     font-size: 1.5em;
-    /* Adjust heading size for tablets */
   }
 
   .rates-section p,
   .policy-section ul li,
   .policy-section p {
     font-size: 1em;
-    /* Slightly smaller text for readability */
   }
 }
 
@@ -82,12 +78,10 @@ strong {
   .rates-section {
     padding: 15px;
     max-width: 95%;
-    /* Further reduce max-width for smaller tablets */
   }
 
   .rates-section h2 {
     font-size: 1.4em;
-    /* Adjust heading size */
   }
 
   .rates-section h3,
@@ -106,14 +100,11 @@ strong {
   .rates-section {
     padding: 10px;
     max-width: 100%;
-    /* Full width for mobile screens */
   }
 
   .rates-section h2 {
     font-size: 1.2em;
-    /* Compact heading size */
     text-align: center;
-    /* Center align for better aesthetics */
   }
 
   .rates-section h3,
@@ -126,11 +117,9 @@ strong {
   .policy-section p {
     font-size: 0.9em;
     line-height: 1.4;
-    /* Improve readability on small screens */
   }
 
   .policy-section ul {
     margin-left: 15px;
-    /* Adjust spacing for smaller screens */
   }
 }

@@ -6,34 +6,26 @@
   color: white;
   position: relative;
   height: auto;
-  /* Allow height to adjust dynamically */
 }
 
 .home-footer p {
   margin: 0;
   font-size: 0.9em;
   color: #D32F2F;
-  /* Reduced font size */
-  /* Smaller font size to reduce overall height */
 }
 
 /* Social Media Links */
 .social-links {
   margin-top: 5px;
-  /* Reduced margin between text and icons */
   display: flex;
   justify-content: center;
   gap: 10px;
-  /* Reduced spacing between icons */
 }
 
 .social-links i,
 .social-links svg {
-  /* Apply styles to both icon fonts and React icons */
   color: #D32F2F;
   font-size: 22px;
-  /* Reduced icon size */
-  /* Smaller icon size for a more compact footer */
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
@@ -41,71 +33,59 @@
 .social-links i:hover,
 .social-links svg:hover {
   color: #C2185B;
-  /* Darker reddish color on hover */
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
   .home-footer {
     padding: 10px;
-    /* Keep the reduced padding */
   }
 
   .home-footer p {
     font-size: 0.85em;
-    /* Slightly smaller font for tablets */
   }
 
   .social-links i,
   .social-links svg {
     font-size: 20px;
-    /* Smaller icons for tablets */
   }
 }
 
 @media (max-width: 768px) {
   .home-footer {
     padding: 8px;
-    /* Further reduce padding for smaller screens */
   }
 
   .home-footer p {
     font-size: 0.8em;
-    /* Smaller font for smaller screens */
   }
 
   .social-links {
     gap: 8px;
-    /* Even smaller gap for mobile */
   }
 
   .social-links i,
   .social-links svg {
     font-size: 18px;
-    /* Smaller icons for mobile */
   }
 }
 
 @media (max-width: 480px) {
   .home-footer {
     padding: 6px;
-    /* Further reduce padding for very small screens */
   }
 
   .home-footer p {
     font-size: 0.7em;
-    /* Compact text size for mobile */
   }
 
   .social-links {
     flex-wrap: wrap;
     gap: 6px;
-    /* Tighten gap for small mobile screens */
   }
 
   .social-links i,
   .social-links svg {
     font-size: 16px;
-    /* Even smaller icons for mobile */
   }
 }

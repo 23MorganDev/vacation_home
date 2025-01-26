@@ -2,39 +2,42 @@ import React from "react";
 import Homeheader from "../Homeheader/Homeheader";
 import Footer from "../Footer/Footer";
 import "./Gallery.css";
-import ImageThree from "../../assets/images/BD image3.jpg"
-import ImageTwo from "../../assets/images/BD image2.jpg"
-import ImageOne from "../../assets/images/BD Image 1.jpg"
+import QueenSize from "../../assets/images/QueenSize.jpg"
+import Kitchen from "../../assets/images/Kitchen.jpg"
+import LivingRoom from "../../assets/images/BD Image 1.jpg"
+import Bedroom from "../../assets/images/bed.jpg"
+import Backyard from "../../assets/images/backyard.jpg"
+import Bathroom from "../../assets/images/ModernBathroom.jpg"
 
 const Gallery = () => {
   const images = [
     {
-      src: ImageOne,
+      src: LivingRoom,
       description:
         "The cozy living room is perfect for relaxation with family and friends.",
     },
     {
-      src: ImageTwo ,
+      src: Bedroom,
       description:
         "Bedroom 1 features a king-sized bed and calming decor for a restful night.",
     },
     {
-      src: ImageThree,
+      src: QueenSize,
       description:
         "Bedroom 2 offers a queen-sized bed with elegant furnishings and a view.",
     },
     {
-      src:  ImageOne ,
+      src: Kitchen,
       description:
         "The fully equipped kitchen is ideal for preparing delicious meals during your stay.",
     },
     {
-      src:  ImageTwo ,
+      src: Bathroom,
       description:
         "Modern bathroom with all the necessary amenities for your comfort.",
     },
     {
-      src:  ImageThree ,
+      src: Backyard,
       description:
         "Enjoy the spacious backyard, perfect for outdoor activities and gatherings.",
     },
