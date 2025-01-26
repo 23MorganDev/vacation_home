@@ -2,6 +2,8 @@ import React from 'react';
 import Homeheader from "../Homeheader/Homeheader";
 import Footer from "../Footer/Footer";
 import './HomePage.css';
+import ImageOne from "../../assets/images/BD image2.jpg"
+
 
 const HomePage = () => {
   return (
@@ -13,20 +15,8 @@ const HomePage = () => {
 
       {/* Center div with two sections */}
       <main className="home-main">
-        <section className="info-section">
-          <div className="info-content">
-            {/* First section with text and image */}
-            <div className="info-block">
-              <img src="https://via.placeholder.com/150" alt="Placeholder 1" />
-              <p>This is the first section with some descriptive text and an image.</p>
-            </div>
-
-            {/* Second section with text and image */}
-            <div className="info-block">
-              <img src="https://via.placeholder.com/150" alt="Placeholder 2" />
-              <p>This is the second section with more information and another image.</p>
-            </div>
-          </div>
+        <section className='bgImage'>
+          <img src={ImageOne} alt='background' />
         </section>
       </main>
 

@@ -1,42 +1,98 @@
 /* Gallery Component Styles */
 .gallery {
-    padding: 20px;
-    background-color: #f9f9f9;
-    margin: 20px 0;
-    border-radius: 5px;
-  }
-  
+  padding: 20px;
+  background-color: #E1F5FE;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #026873;
+  /* Seaweed Green for header */
+}
+
+/* Grid layout for gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* Gallery item styles */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: none;
+  /* Removed box-shadow for uniformity */
+  transition: transform 0.3s ease-in-out;
+  height: 300px;
+  /* Fixed height for uniform gallery items */
+  display: flex;
+  flex-direction: column;
+  /* Allows description to be at the bottom */
+  justify-content: space-between;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 70%;
+  /* Ensures the image takes up 70% of the item's height */
+  object-fit: cover;
+  /* Ensures image covers the area */
+}
+
+.gallery-description {
+  padding: 10px;
+  font-size: 1em;
+  color: #004D61;
+  /* Muted Ocean Teal for description */
+  text-align: center;
+  background-color: #FFF;
+  border-radius: 0 0 10px 10px;
+  box-shadow: none;
+  /* Removed shadow for description */
+  /* Ensures uniformity of the description area */
+}
+
+/* Hover effect for gallery items */
+.gallery-item:hover {
+  transform: scale(1.05);
+  /* Slight scale effect on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
   .gallery h2 {
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #026873;
+    /* Same Seaweed Green for mobile */
   }
-  
+
   .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 15px; /* Space between items */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
   }
-  
-  .gallery-item {
-    overflow: hidden; /* Prevents overflow from the image */
-    border-radius: 5px;
-    transition: transform 0.3s;
-  }
-  
-  .gallery-item img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove bottom space */
-  }
-  
+
   .gallery-description {
-    padding: 10px; /* Space around description */
-    font-size: 0.9em; /* Slightly smaller font size */
-    color: #555; /* Dark gray color for better readability */
-    text-align: center; /* Center align the text */
+    font-size: 0.9em;
   }
-  
-  .gallery-item:hover {
-    transform: scale(1.05); /* Scale effect on hover */
+}
+
+@media (max-width: 480px) {
+  .gallery h2 {
+    font-size: 1.5em;
+    color: #026873;
   }
-  
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .gallery-description {
+    font-size: 0.8em;
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Homeheader from "../Homeheader/Homeheader";
 import Footer from "../Footer/Footer";
-import "./Availability.css"; // Import CSS file for styling
+import "./Availability.css"; 
 
 const CalendarAvailability = () => {
   // State to manage the current month and year
@@ -24,7 +24,7 @@ const CalendarAvailability = () => {
     "December",
   ];
 
-  // Example availability data (replace this with your actual data)
+  // Example availability date
   const availability = {
     "2024-09-01": true,
     "2024-09-02": false,

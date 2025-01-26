@@ -1,70 +1,207 @@
-/* Overview Component */
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #E1F5FE;
+  /* Light Sky Blue - subtle beach backdrop */
+  color: #003B73;
+  /* Deep Ocean Blue for default text */
+}
+
 .overview {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Header */
-  .overview-header {
-    position: relative;
-  }
-  
-  .header-image {
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Home Header */
-  .home-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 10px;
-  }
-  
-  /* Sections */
-  section {
-    padding: 20px;
-    background-color: #f9f9f9;
-    margin: 10px 0;
-    border-radius: 5px;
-  }
-  
-  /* Picture Catalogue */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Section Styling */
+section {
+  padding: 20px;
+  background-color: #FFF;
+  /* White for a clean section look */
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headings */
+h2 {
+  font-size: 1.8rem;
+  color: #026873;
+  /* Seaweed Green - refreshing and tropical */
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #026873;
+  /* Same green for subheadings */
+  margin-bottom: 10px;
+}
+
+p,
+ul {
+  color: #004D61;
+  /* Muted Ocean Teal - easy readability */
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+/* Description Section */
+.description {
+  color: #004D61;
+  /* Muted Ocean Teal */
+}
+
+/* Picture Catalogue */
+.picture-catalogue {
+  text-align: center;
+}
+
+.pictures {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pictures img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.pictures img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Sleeping Arrangements, Amenities, Rules, Policy Sections */
+.sleeping-arrangements,
+.amenities,
+.house-rules,
+.house-policy {
+  color: #D32F2F;
+}
+
+.sleeping-arrangements ul,
+.amenities ul,
+.house-rules ul,
+.house-policy ul {
+  color: #026873;
+  /* Seaweed Green for bullet items */
+}
+
+/* Highlight Links and Buttons */
+a {
+  color: #FF7043;
+  /* Sunset Orange for links */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #FF8A80;
+  /* Coral Pink hover effect */
+}
+
+/* Footer */
+.home-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #003B73;
+  /* Deep Ocean Blue */
+  color: #FFF;
+  /* White for contrast */
+  margin-top: 20px;
+  border-top: 5px solid #FF7043;
+  /* Sunset Orange divider */
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #FF7043;
+  /* Sunset Orange */
+  margin: 0 15px;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  color: #FF8A80;
+  /* Coral Pink hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .pictures {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    gap: 10px;
   }
-  
+
   .pictures img {
-    max-width: 300px; 
-    margin: 10px;
+    max-width: 45%;
   }
-  
-  /* Footer */
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 15px;
+  }
+
+  .pictures img {
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  ul {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pictures img {
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p,
+  ul {
+    font-size: 0.85rem;
+  }
+
   .home-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    position: relative;
+    padding: 15px;
   }
-  
-  .social-links {
-    margin-top: 10px;
-  }
-  
+
   .social-links a {
-    color: white;
-    margin: 0 15px;
-    font-size: 24px; 
-    text-decoration: none;
+    font-size: 20px;
+    margin: 0 10px;
   }
-  
+}

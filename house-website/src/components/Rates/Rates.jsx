@@ -36,7 +36,7 @@ const Rates = () => {
 
           <h4>Security Deposit</h4>
           <p>
-            A pre-authorization of <strong>KSh64,372</strong> is held 1 day
+            A pre-authorization of <strong>KSh6,372</strong> is held 1 day
             before arrival and voided 1 day after departure.
           </p>
         </div>

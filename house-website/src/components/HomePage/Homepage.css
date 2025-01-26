@@ -8,76 +8,40 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
+  height: 100vh; /* Ensure the body fills the viewport */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .homepage {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  height: 100vh; /* Ensure full viewport height */
 }
 
-
-/* Center div - main content */
 .home-main {
-  flex: 1; 
-  padding: 20px;
-  background-color: white;
+  flex: 1; /* Occupies all remaining space after header and footer */
+  display: flex; /* Allows full control over the layout */
 }
 
-.info-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+.bgImage {
+  position: relative;
+  flex: 1; /* Stretches to fill the remaining space */
+  overflow: hidden; /* Ensures no scrollbars if the image overflows */
 }
 
-.info-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Space between the two sections */
-  margin-top: 20px;
-}
-
-.info-block {
-  display: flex;
-  align-items: center;
-  gap: 20px; 
+.bgImage img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the container proportionally */
 }
 
-.info-block img {
-  width: 150px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.info-block p {
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 600px;
-}
-
-/* Media queries for responsiveness */
-@media (min-width: 768px) {
-  .info-content {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .info-block {
-    width: 45%; /* Two blocks will take up 45% of the width each */
-  }
-}
-
-@media (max-width: 767px) {
-  .info-block {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .info-block img {
-    margin-bottom: 10px;
-  }
+/* Header and Footer */
+header,
+footer {
+  flex-shrink: 0; /* Prevents them from shrinking */
+  height: auto; /* Adjust height dynamically */
+  max-height: 15vh; /* Optional: Limit their height */
 }

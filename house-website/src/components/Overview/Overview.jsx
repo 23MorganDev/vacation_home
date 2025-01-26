@@ -2,6 +2,9 @@ import React from "react";
 import "./Overview.css";
 import Homeheader from "../Homeheader/Homeheader.jsx";
 import Footer from "../Footer/Footer.jsx";
+import ImageThree from "../../assets/images/BD image3.jpg"
+import ImageTwo from "../../assets/images/BD image2.jpg"
+import ImageOne from "../../assets/images/BD Image 1.jpg"
 
 const Overview = () => {
   return (
@@ -12,13 +15,6 @@ const Overview = () => {
       </div>
       <div className="overview">
         {/* Top Div with Image and Header */}
-        <header className="overview-header">
-          <img
-            src="https://via.placeholder.com/1920x400"
-            alt="Vacation Home"
-            className="header-image"
-          />
-        </header>
         {/* Description of the Vacation Place */}
         <section className="description">
           <h2>Welcome to Our Vacation Home</h2>
@@ -38,9 +34,9 @@ const Overview = () => {
         <section className="picture-catalogue">
           <h2>Picture Catalogue</h2>
           <div className="pictures">
-            <img src="https://via.placeholder.com/300" alt="Room 1" />
-            <img src="https://via.placeholder.com/300" alt="Room 2" />
-            <img src="https://via.placeholder.com/300" alt="Living Room" />
+            <img src={ImageTwo} alt="Room 1" />
+            <img src={ImageThree} alt="Room 2" />
+            <img src={ImageTwo} alt="Living Room" />
           </div>
         </section>
         {/* Sleeping Arrangements */}

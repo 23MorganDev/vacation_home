@@ -10,86 +10,122 @@ body {
 }
 
 /* Header container */
-.home-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
+  padding: 0.5rem 1rem;
+  background-color: #B3E5FC;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #026873;
   position: relative;
-  z-index: 100;
 }
 
-/* Logo styling */
 .logo {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #bd0b9ff8;
-  text-transform: uppercase;
+  color: #003B73;
+  font-family: 'Georgia', serif;
 }
 
-/* Navigation styling */
-nav {
-  flex-grow: 1;
-  text-align: center; 
+.menu-icon {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  color: #003B73;
+  cursor: pointer;
 }
 
 .nav-links {
-  display: inline-flex; 
-  gap: 30px; 
+  display: flex;
+  gap: 1rem;
 }
 
-.nav-links li {
+.nav-links ul {
+  display: flex;
+  gap: 1rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links li a {
+.nav-links ul li {
+  position: relative;
+}
+
+.nav-links ul li a {
   text-decoration: none;
-  font-size: 1rem;
+  color: #026873;
   font-weight: bold;
-  color: orangered;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
-.nav-links li a:hover {
-  color: #bd0b9ff8;
+.nav-links ul li a.active {
+  font-weight: bold;
+  color: #007bff;
 }
 
-.nav-links li a.active {
-  color: #bd0b9ff8;;
-  border-bottom: 2px solid #f0c040;
-}
-
-
-.book-now {
-  margin-left: auto;
+.book-button .book-now {
+  background-color: #FF7043;
+  /* Sunset Orange */
+  color: #FFF;
+  /* White for contrast */
   padding: 10px 20px;
-  background-color: #f0c040;
   border: none;
-  color: #333;
+  border-radius: 8px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-.book-now:hover {
-  background-color:#bd0b9ff8;
+.book-button .book-now:hover {
+  background-color: #FF8A80;
+  /* Coral Pink - subtle hover effect */
 }
 
-/* Media Queries for Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    z-index: 10;
+  }
+
   .nav-links {
-    display: none; /* Hide navigation links on smaller screens */
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    height: calc(100vh - 4rem);
+    background-color: white;
+    width: 100%;
+    max-width: 300px;
+    transform: translateX(-100%);
+
+    /* Hidden off-screen initially */
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    gap: 0;
+    z-index: 9;
   }
 
-  .book-now {
-    padding: 8px 16px;
-    font-size: 0.9rem;
+  .nav-links.open {
+    transform: translateX(0);
   }
 
-  .logo {
-    font-size: 1.5rem;
+  .nav-links ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-links ul li {
+    text-align: left;
+    padding: 0.5rem 1rem;
+  }
+
+  .book-button {
+    margin: 1rem;
   }
 }

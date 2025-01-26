@@ -2,36 +2,39 @@ import React from "react";
 import Homeheader from "../Homeheader/Homeheader";
 import Footer from "../Footer/Footer";
 import "./Gallery.css";
+import ImageThree from "../../assets/images/BD image3.jpg"
+import ImageTwo from "../../assets/images/BD image2.jpg"
+import ImageOne from "../../assets/images/BD Image 1.jpg"
 
 const Gallery = () => {
   const images = [
     {
-      src: "https://via.placeholder.com/300?text=Living+Room",
+      src: ImageOne,
       description:
         "The cozy living room is perfect for relaxation with family and friends.",
     },
     {
-      src: "https://via.placeholder.com/300?text=Bedroom+1",
+      src: ImageTwo ,
       description:
         "Bedroom 1 features a king-sized bed and calming decor for a restful night.",
     },
     {
-      src: "https://via.placeholder.com/300?text=Bedroom+2",
+      src: ImageThree,
       description:
         "Bedroom 2 offers a queen-sized bed with elegant furnishings and a view.",
     },
     {
-      src: "https://via.placeholder.com/300?text=Kitchen",
+      src:  ImageOne ,
       description:
         "The fully equipped kitchen is ideal for preparing delicious meals during your stay.",
     },
     {
-      src: "https://via.placeholder.com/300?text=Bathroom",
+      src:  ImageTwo ,
       description:
         "Modern bathroom with all the necessary amenities for your comfort.",
     },
     {
-      src: "https://via.placeholder.com/300?text=Backyard",
+      src:  ImageThree ,
       description:
         "Enjoy the spacious backyard, perfect for outdoor activities and gatherings.",
     },
@@ -49,7 +52,6 @@ const Gallery = () => {
             <div className="gallery-item" key={index}>
               <img src={image.src} alt={`Gallery Item ${index + 1}`} />
               <p className="gallery-description">{image.description}</p>{" "}
-              {/* Description for each image */}
             </div>
           ))}
         </div>
