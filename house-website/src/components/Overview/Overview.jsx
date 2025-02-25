@@ -2,9 +2,9 @@ import React from "react";
 import "./Overview.css";
 import Homeheader from "../Homeheader/Homeheader.jsx";
 import Footer from "../Footer/Footer.jsx";
-import ImageThree from "../../assets/images/BD image3.jpg"
-import ImageTwo from "../../assets/images/BD image2.jpg"
-import ImageOne from "../../assets/images/BD Image 1.jpg"
+import Roof from "../../assets/images/Roof.jpg"
+import Lawn from "../../assets/images/lawn2.jpg"
+import pavillion from "../../assets/images/pavillion.jpg"
 
 const Overview = () => {
   return (
@@ -14,8 +14,6 @@ const Overview = () => {
         <Homeheader />
       </div>
       <div className="overview">
-        {/* Top Div with Image and Header */}
-        {/* Description of the Vacation Place */}
         <section className="description">
           <h2>Welcome to Our Vacation Home</h2>
           <p>
@@ -34,9 +32,9 @@ const Overview = () => {
         <section className="picture-catalogue">
           <h2>Picture Catalogue</h2>
           <div className="pictures">
-            <img src={ImageTwo} alt="Room 1" />
-            <img src={ImageThree} alt="Room 2" />
-            <img src={ImageTwo} alt="Living Room" />
+            <img src={Roof} alt="Room 1" />
+            <img src={Lawn} alt="Room 2" />
+            <img src={pavillion} alt="Pavillion" />
           </div>
         </section>
         {/* Sleeping Arrangements */}
@@ -80,7 +78,7 @@ const Overview = () => {
           </p>
         </section>
         {/* Footer with Social Media Links */}
-        <Footer /> {/* Use theFooter component */}
+        <Footer /> 
       </div>
     </>
   );

@@ -7,7 +7,7 @@ const Footer = () =>  {
   return (
     
     <footer className="home-footer">
-    <p>© 2025 Lamu House. All rights reserved.</p>
+    <p>© 2025 Mbuyuni House. All rights reserved.</p>
     <div className="social-links">
         <FaXTwitter />
         <i className="fab fa-twitter"></i> 

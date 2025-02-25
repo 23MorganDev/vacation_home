@@ -70,16 +70,11 @@ ul {
 
 .pictures img {
   max-width: 100%;
-  height: auto;
+  height: 500px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.pictures img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
 
 /* Sleeping Arrangements, Amenities, Rules, Policy Sections */
 .sleeping-arrangements,
@@ -150,6 +145,7 @@ a:hover {
 
   .pictures img {
     max-width: 90%;
+    height: 320px;
   }
 
   h2 {

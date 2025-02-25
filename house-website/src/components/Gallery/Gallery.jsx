@@ -2,12 +2,13 @@ import React from "react";
 import Homeheader from "../Homeheader/Homeheader";
 import Footer from "../Footer/Footer";
 import "./Gallery.css";
-import QueenSize from "../../assets/images/QueenSize.jpg"
-import Kitchen from "../../assets/images/Kitchen.jpg"
-import LivingRoom from "../../assets/images/BD Image 1.jpg"
-import Bedroom from "../../assets/images/bed.jpg"
-import Backyard from "../../assets/images/backyard.jpg"
-import Bathroom from "../../assets/images/ModernBathroom.jpg"
+import TvRoom from "../../assets/images/Tv_room1.jpg"
+import Kitchen from "../../assets/images/Kitchen1.jpg"
+import LivingRoom from "../../assets/images/living_room.jpg"
+import Bedroom from "../../assets/images/Bedroom2.jpg"
+import Gazebo from "../../assets/images/Resting_area1.jpg"
+import Backyard from "../../assets/images/Backyard1.jpg"
+import Bathroom from "../../assets/images/cloakroom.jpg"
 
 const Gallery = () => {
   const images = [
@@ -22,9 +23,9 @@ const Gallery = () => {
         "Bedroom 1 features a king-sized bed and calming decor for a restful night.",
     },
     {
-      src: QueenSize,
+      src: TvRoom,
       description:
-        "Bedroom 2 offers a queen-sized bed with elegant furnishings and a view.",
+        "TV room has spacious space and comfortable chairs for a fun movie and sports watching session.",
     },
     {
       src: Kitchen,
@@ -35,6 +36,11 @@ const Gallery = () => {
       src: Bathroom,
       description:
         "Modern bathroom with all the necessary amenities for your comfort.",
+    },
+    {
+      src: Gazebo,
+      description:
+        "Enjoy the spacious Gazebo for late night coffee",
     },
     {
       src: Backyard,

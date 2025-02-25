@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh; 
-  background-image: url("../../assets/images/landing page.jpg");
+  background-image: url("../../assets/images/living_room.jpg");
   /* Background image for the homepage */
   background-size: cover;
   background-position: center;

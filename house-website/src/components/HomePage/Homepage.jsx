@@ -1,7 +1,7 @@
 import React from 'react';
 import Homeheader from "../Homeheader/Homeheader";
 import Footer from "../Footer/Footer";
-import './HomePage.css';
+import "./Homepage.css"
 
 const HomePage = () => {
   return (
@@ -12,7 +12,7 @@ const HomePage = () => {
       {/* Main content */}
       <main className="home-main">
         <div className="content">
-          <h1>Welcome to Lamu House</h1>
+          <h1>Welcome to Mbuyuni House</h1>
           <p>Your journey of tranquility and serene living starts here.</p>
         </div>
       </main>

@@ -5,6 +5,7 @@ import Overview from './components/Overview/Overview'
 import Gallery from './components/Gallery/Gallery'
 import CalendarAvailability from './components/Availability/Availability'
 import Rates from './components/Rates/Rates'
+import Booking from './Booking/Booking'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path='/gallery' element={<Gallery />} />
           <Route path='/availability' element={<CalendarAvailability />} />
           <Route path='/rates' element={<Rates />} />
+          <Route path='/booking' element={<Booking />} />
         </Routes>
       </Router>
     </>
