@@ -1,7 +1,7 @@
 import React from 'react';
 import Homeheader from "../Homeheader/Homeheader";
 import Footer from "../Footer/Footer";
-import "./Homepage.css"
+import './HomePage.css';
 
 const HomePage = () => {
   return (
