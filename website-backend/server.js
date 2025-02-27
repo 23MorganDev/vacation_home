@@ -25,11 +25,8 @@ const corsOptions = {
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }
-
-
 // CORS middleware
 app.use(cors(corsOptions));
-
 app.options("*", cors(corsOptions));
 //routes imports
 const bookingRoute = require("./routes/booking_route/booking.js")
