@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import configPath from "../components/Paths/configPaths";
+const BACKEND_BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL || "http://localhost:3000/backend";
 import "./Booking.css"
 
 const Booking = () => {
