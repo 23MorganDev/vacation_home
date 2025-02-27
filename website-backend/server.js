@@ -20,7 +20,7 @@ mongoose.set("debug", true)
 
 //CORS CONFIGURATION
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: ["http://localhost:5173", "https://mbuyuni-vacation-home.onrender.com"],
     methods: ['GET', 'POST', 'DELETE', 'PUT', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
