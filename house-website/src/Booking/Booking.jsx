@@ -16,7 +16,7 @@ const Booking = () => {
     const handleBooking = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(configPath.ENDPOINTS.BOOKING, {
+            const response = await fetch(`${BACKEND_BASE_URL}${configPath.ENDPOINTS.BOOKING}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
