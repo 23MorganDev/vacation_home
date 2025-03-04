@@ -22,7 +22,10 @@ app.use(express.json());
 
 //DB CONNECT
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URL, {
+    tlsAllowInvalidCertificates: true,  
+    tlsAllowInvalidHostnames: true      
+})
 
 const DB = mongoose.connection;
 DB.on("error", (err) => console.error("Database connection error:", err));
