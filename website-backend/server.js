@@ -5,6 +5,10 @@ const cors = require("cors")
 
 const app = express();
 
+// CORS middleware
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
+
 //middleware
 app.use(express.json());
 
@@ -20,14 +24,12 @@ mongoose.set("debug", true)
 
 //CORS CONFIGURATION
 const corsOptions = {
-    origin: ["http://localhost:5173", "https://mbuyuni-vacation-home.onrender.com"],
+    origin: ["http://localhost:5173", "https://mbuyuni-vacation-home.onrender.com", "https://mbuyuni-house.onrender.com"],
     methods: ['GET', 'POST', 'DELETE', 'PUT', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }
-// CORS middleware
-app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
+
 //routes imports
 const bookingRoute = require("./routes/booking_route/booking.js")
 app.use("/backend", bookingRoute)
