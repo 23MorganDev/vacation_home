@@ -5,6 +5,14 @@ const cors = require("cors")
 
 const app = express();
 
+//CORS CONFIGURATION
+const corsOptions = {
+    origin: ["http://localhost:5173", "https://mbuyuni-vacation-home.onrender.com", "https://mbuyuni-house.onrender.com"],
+    methods: ['GET', 'POST', 'DELETE', 'PUT', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}
+
 // CORS middleware
 app.use(cors(corsOptions));
 app.options("*", cors(corsOptions));
@@ -21,14 +29,6 @@ DB.on("error", (err) => console.error("Database connection error:", err));
 DB.once("open", () => console.log("Database connected successfully!"));
 
 mongoose.set("debug", true)
-
-//CORS CONFIGURATION
-const corsOptions = {
-    origin: ["http://localhost:5173", "https://mbuyuni-vacation-home.onrender.com", "https://mbuyuni-house.onrender.com"],
-    methods: ['GET', 'POST', 'DELETE', 'PUT', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true
-}
 
 //routes imports
 const bookingRoute = require("./routes/booking_route/booking.js")
