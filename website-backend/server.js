@@ -23,8 +23,10 @@ app.use(express.json());
 //DB CONNECT
 
 mongoose.connect(process.env.MONGO_URL, {
-    tlsAllowInvalidCertificates: true,  
-    tlsAllowInvalidHostnames: true      
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    tls: true,   
+    ssl: true    
 })
 
 const DB = mongoose.connection;
