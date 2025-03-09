@@ -34,10 +34,6 @@ DB.once("open", () => console.log("Database connected successfully!"));
 
 mongoose.set("debug", true);
 
-// Routes imports
-const bookingRoute = require("./routes/booking_route/booking.js");
-app.use("/backend", bookingRoute);
-
 // Global error handler 
 app.use((err, req, res, next) => {
     // Optionally log the error
@@ -45,6 +41,13 @@ app.use((err, req, res, next) => {
     res.header("Access-Control-Allow-Origin", req.headers.origin || "*");
     res.status(err.status || 500).json({ error: err.message });
 });
+
+
+// Routes imports
+const bookingRoute = require("./routes/booking_route/booking.js");
+app.use("/backend", bookingRoute);
+
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
