@@ -34,19 +34,25 @@ DB.once("open", () => console.log("Database connected successfully!"));
 
 mongoose.set("debug", true);
 
-// Global error handler 
-app.use((err, req, res, next) => {
-    // Optionally log the error
-    console.error(err);
-    res.header("Access-Control-Allow-Origin", req.headers.origin || "*");
-    res.status(err.status || 500).json({ error: err.message });
-});
-
-
 // Routes imports
 const bookingRoute = require("./routes/booking_route/booking.js");
 app.use("/backend", bookingRoute);
 
+// Routes
+app.use("/backend", bookingRoute);
+
+// Catch-all for unmatched routes
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", req.headers.origin || "*");
+  res.status(404).json({ error: "Route not found" });
+});
+
+// Global error handler
+app.use((err, req, res, next) => {
+    console.error(err);
+    res.header("Access-Control-Allow-Origin", req.headers.origin || "*");
+    res.status(err.status || 500).json({ error: err.message });
+});
 
 
 const PORT = process.env.PORT || 3000;
