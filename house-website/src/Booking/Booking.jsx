@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import configPath from "../components/Paths/configPaths";
-const BACKEND_BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL || "http://localhost:3000/backend";
-import "./Booking.css"
+import emailjs from "@emailjs/browser"
+import "./Booking.css";
+
 
 const Booking = () => {
     const [name, setName] = useState("");
@@ -11,35 +11,46 @@ const Booking = () => {
     const [check_out, setCheck_out] = useState("");
     const [guests, setGuests] = useState("");
     const [error, setError] = useState("");
+    const [successMessage, setSuccessMessage] = useState("");
 
     const navigate = useNavigate();
 
     const handleBooking = async (e) => {
         e.preventDefault();
+        setError("");
+        setSuccessMessage("");
+
+
+        const templateParams = {
+            to_name: import.meta.env.VITE_RECIPIENT_USER_EMAIL,
+            name,
+            email,
+            check_in,
+            check_out,
+            guests,
+        }
+
         try {
-            const response = await fetch(`${BACKEND_BASE_URL}${configPath.ENDPOINTS.BOOKING}`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    name,
-                    email,
-                    check_in: new Date(check_in).toISOString(),
-                    check_out: new Date(check_out).toISOString(),
-                    guests:Number(guests),
-                }),
-            });
+            const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+            const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+            const userID = import.meta.env.VITE_EMAILJS_USER_ID;
 
-            if (!response.ok) {
-                throw new Error("Booking failed! Please try again.");
-            }
+            const response = await emailjs.send(serviceID, templateID, templateParams, userID);
+            console.log("Email sent successfully!", response.text);
 
-            console.log("Booking placed successfully");
-            navigate("/");
+            setSuccessMessage("Booking request sent successfully!");
+
+            // Clear form fields
+            setName("");
+            setEmail("");
+            setCheck_in("");
+            setCheck_out("");
+            setGuests("");
+
+            setTimeout(() => navigate("/"), 3000);
         } catch (error) {
-            console.error("Server error occurred when trying to book:", error);
-            setError(error.message);
+            console.error("Error sending booking email:", error);
+            setError("Failed to send booking. Please try again.");
         }
     };
 
@@ -113,6 +124,7 @@ const Booking = () => {
                         </div>
 
                         {error && <p className="text-danger">{error}</p>}
+                        {successMessage && <p className="text-success">{successMessage}</p>}
 
                         <button type="submit" className="btn booking-btn w-100">
                             Book Now

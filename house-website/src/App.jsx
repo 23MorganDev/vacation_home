@@ -5,7 +5,7 @@ import Overview from './components/Overview/Overview'
 import Gallery from './components/Gallery/Gallery'
 import CalendarAvailability from './components/Availability/Availability'
 import Rates from './components/Rates/Rates'
-import Booking from './Booking/Booking'
+import Booking from './Booking/Booking.jsx'
 
 const App = () => {
   return (
