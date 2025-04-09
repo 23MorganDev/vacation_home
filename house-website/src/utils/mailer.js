@@ -5,7 +5,7 @@ require("dotenv").config();
 //email transporter using SMPT settings
 
 const transporter = nodemailer.createTransport({
-  service: "Yahoo",
+  service: "Gmail",
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.MAIL_APP_PASSWORD,
